@@ -18,7 +18,14 @@ cetak = () => {
     if(isNaN(detik)) {
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-danger'
-        document.getElementById('hasil').innerText = 'Input mengandung nilai NaN!'
+         document.getElementById('hasil').innerText = `Input mengandung nilai NaN!`
+         for(i = 0; i < detik.length; i++) {
+             if(isNaN(parseInt(detik[i]))) {
+                 console.log(detik[i])
+                //  document.getElementById('hasil').innerText = `Input mengandung nilai NaN `
+                document.getElementById('hasil').innerText += `${detik[i]}, `
+             }
+         }
     }
     else {
         alert = document.getElementsByClassName('alert')
