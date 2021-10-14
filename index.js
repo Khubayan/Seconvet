@@ -18,7 +18,7 @@ cetak = () => {
     if(isNaN(detik)) {
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-danger'
-        document.getElementById('hasil').innerText = 'Tau angka lu tolol!'
+        document.getElementById('hasil').innerText = 'Input menggandung nilai NaN!'
     }
     else {
         alert = document.getElementsByClassName('alert')
