@@ -1,11 +1,3 @@
-
-
-// let jam = Math.floor(detik / 3600)
-// let sisaDetik = detik % 3600
-// let menit = Math.floor(sisaDetik / 60)
-// sisaDetik = sisaDetik % 60
-
-
 let number = /^[0-9]+$/
 
 kosongState = () => {
