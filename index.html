@@ -32,9 +32,11 @@
     <div class="card mx-auto " style="width: 18rem; margin: 15%;">
         <div class="card-body">
           <h5 class="card-title my-3 text-center">Seconvet</h5>
-          <input type="text" id="detik" class="form-control" placeholder="Masukkan jumlah detiknya..."/>
-          <button type="button" onclick="cetak()" class="btn btn-primary my-4">Cetak</button>
-          <button onclick="window.location.reload()" class="btn btn-warning">Bersihkan</button>
+          <form action="">
+            <input type="text" id="detik" class="form-control" placeholder="Masukkan jumlah detiknya..." oninput="cetak()" autocomplete="off"/>
+            <!-- <button type="button" onclick="cetak()" class="btn btn-primary my-4">Cetak</button> -->
+            <input type="reset" class="btn btn-warning my-4" value="Reset" onclick="kosongState()"></input>
+          </form>
           <p class="text-primary">Hasil output:</p>
           <p id="hasil" class="alert"></p>
           <div class="mt-2 float-end mx-2">
