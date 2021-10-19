@@ -25,7 +25,7 @@ cetak = () => {
          document.getElementById('hasil').innerText = `Input mengandung nilai bukan angka: `
          for(i = 0; i < panjangDetik; i++) {
 
-            if(isNaN(detik[i]) && detik[i] != '.' || detik.indexOf(' ')) {
+            if(isNaN(detik[i]) && detik[i] != '.') {
                 document.getElementById('hasil').innerHTML += `<span class='text-danger'><ins>${detik[i]}</ins></span>`
             } else {
                 document.getElementById('hasil').innerHTML += `<span class='text-dark'>${detik[i]}</span>`
