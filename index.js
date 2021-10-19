@@ -22,21 +22,37 @@ cetak = () => {
         let panjangDetik = detik.length
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-danger'
-         document.getElementById('hasil').innerText = `Input mengandung nilai NaN \"`
+         document.getElementById('hasil').innerText = `Input mengandung nilai bukan angka: `
          for(i = 0; i < panjangDetik; i++) {
-             if(isNaN(parseInt(detik[i]))) {
-                //  console.log(detik[i])
-                //  document.getElementById('hasil').innerText = `Input mengandung nilai NaN `
-                document.getElementById('hasil').innerText += `${detik[i]}`
-                if(i < panjangDetik - 1) {
-                    document.getElementById('hasil').innerText += `, `
-                }
-             }
+
+            if(isNaN(detik[i]) && detik[i] != '.' || detik.indexOf(' ')) {
+                document.getElementById('hasil').innerHTML += `<span class='text-danger'><ins>${detik[i]}</ins></span>`
+            } else {
+                document.getElementById('hasil').innerHTML += `<span class='text-dark'>${detik[i]}</span>`
+            }
+
+
+
+        //      if(isNaN(parseInt(detik[i]))) {
+        //         //  console.log(detik[i])
+        //         //  document.getElementById('hasil').innerText = `Input mengandung nilai NaN `
+
+
+
+        //         document.getElementById('hasil').innerText += `${detik[i]}`
+        //         if(i < panjangDetik - 1) {
+        //             document.getElementById('hasil').innerText += `, `
+        //         }
+        //      }
+
          }
-         document.getElementById('hasil').innerText += '"!'
+        //  document.getElementById('hasil').innerText += '"!'
+
+        
+
     }
    
-    else if (detik.match(number)) {
+    else if (detik.match(number) && !isNaN(detik)) {
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-primary'
         document.getElementById('hasil').innerText = `${detik} detik = ${jam} jam : ${(menit < 10 ? '0' + menit : menit)} menit : ${sisaDetik} detik`
