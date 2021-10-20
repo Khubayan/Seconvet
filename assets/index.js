@@ -31,7 +31,7 @@ function cetak() {
                 document.getElementById('hasil').innerHTML += `<span class='text-dark'>${detik[i]}</span>`
             }
          }
-    } else if (detik.match(number) && !isNaN(detik)) {
+    } else if (!isNaN(detik)) {
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-primary'
         document.getElementById('hasil').innerText = `${detik} detik = ${jam} jam : ${(menit < 10 ? '0' + menit : menit)} menit : ${sisaDetik} detik`
