@@ -6,4 +6,5 @@
 * Lihat demo aplikasi di https://Seconvet-1.khubayan.repl.co
 
 # Sign
-Ini adalah program pertama saya :)
+Ini adalah program pertama saya :).
+Terimakasih bagi yang telah berkontribusi dalam aplikasi ini❤(ӦｖӦ｡).
