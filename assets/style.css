@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+* {
+    font-family: 'Noto Sans Mono', monospace;
+}
+.form-control::-webkit-input-placeholder {
+    font-size: 10px;
+}
+.fab:hover {
+    font-size: larger;
+}
