@@ -1,6 +1,6 @@
 let number = /^[0-9]+$/
 
-kosongState = () => {
+function kosongState() {
     let alert = document.getElementsByClassName('alert')
     let year = new Date()
     alert[0].className += ' alert-dark text-center'
@@ -11,7 +11,7 @@ do {
     kosongState()
 } while (document.getElementById('detik').length == 0)
 
-cetak = () => {
+function cetak() {
     let detik = document.getElementById('detik').value
     let jam = Math.floor(detik / 3600)
     let sisaDetik = detik % 3600
@@ -30,43 +30,12 @@ cetak = () => {
             } else {
                 document.getElementById('hasil').innerHTML += `<span class='text-dark'>${detik[i]}</span>`
             }
-
-
-
-        //      if(isNaN(parseInt(detik[i]))) {
-        //         //  console.log(detik[i])
-        //         //  document.getElementById('hasil').innerText = `Input mengandung nilai NaN `
-
-
-
-        //         document.getElementById('hasil').innerText += `${detik[i]}`
-        //         if(i < panjangDetik - 1) {
-        //             document.getElementById('hasil').innerText += `, `
-        //         }
-        //      }
-
          }
-        //  document.getElementById('hasil').innerText += '"!'
-
-        
-
-    }
-   
-    else if (detik.match(number) && !isNaN(detik)) {
+    } else if (detik.match(number) && !isNaN(detik)) {
         alert = document.getElementsByClassName('alert')
         alert[0].className = 'alert alert-primary'
         document.getElementById('hasil').innerText = `${detik} detik = ${jam} jam : ${(menit < 10 ? '0' + menit : menit)} menit : ${sisaDetik} detik`
-    }
-    else {
+    } else {
         kosongState()
     }
-
 }
-
-// kosong = () => {
-//     console.log(detik.value)
-// }
-
-// console.log(`${input} detik = ${jam} jam : ${(menit < 10 ? '0' + menit : menit)} menit : ${sisaDetik} detik`)
-
-// document.querySelector('h5').innerText = `${input} detik = ${jam} jam : ${(menit < 10 ? '0' + menit : menit)} menit : ${sisaDetik} detik`
